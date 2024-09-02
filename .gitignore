@@ -1,0 +1,18 @@
+
+# Xcode
+DerivedData/
+.idea/
+xcuserdata/
+*.xcworkspace
+!default.xcworkspace
+
+
+# Xcode project files
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+
+.DS_Store
+
+# Secrets
+Secrets.xcconfig

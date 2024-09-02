@@ -16,6 +16,11 @@
 		5C398D422C85931500E4035C /* MoviesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D412C85931500E4035C /* MoviesUITestsLaunchTests.swift */; };
 		5C398D502C85945900E4035C /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D4F2C85945900E4035C /* Store.swift */; };
 		5C398D532C85966800E4035C /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D522C85966800E4035C /* AppReducer.swift */; };
+		5C398D562C85971100E4035C /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D552C85971100E4035C /* ImageDownloader.swift */; };
+		5C398D592C8597DC00E4035C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D582C8597DC00E4035C /* String+Extensions.swift */; };
+		5C398D5C2C85987B00E4035C /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D5B2C85987B00E4035C /* URLImage.swift */; };
+		5C398D5E2C85997000E4035C /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D5D2C85997000E4035C /* RatingView.swift */; };
+		5C398D612C859C7400E4035C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D602C859C7400E4035C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,12 @@
 		5C398D412C85931500E4035C /* MoviesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5C398D4F2C85945900E4035C /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		5C398D522C85966800E4035C /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		5C398D552C85971100E4035C /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		5C398D582C8597DC00E4035C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		5C398D5B2C85987B00E4035C /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		5C398D5D2C85997000E4035C /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		5C398D5F2C859B6000E4035C /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		5C398D602C859C7400E4035C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +89,7 @@
 		5C398D182C85931400E4035C = {
 			isa = PBXGroup;
 			children = (
+				5C398D5F2C859B6000E4035C /* Secrets.xcconfig */,
 				5C398D232C85931400E4035C /* Movies */,
 				5C398D342C85931500E4035C /* MoviesTests */,
 				5C398D3E2C85931500E4035C /* MoviesUITests */,
@@ -99,7 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				5C398D242C85931400E4035C /* MoviesApp.swift */,
+				5C398D602C859C7400E4035C /* Constants.swift */,
 				5C398D262C85931400E4035C /* ContentView.swift */,
+				5C398D5A2C85985200E4035C /* Views */,
+				5C398D542C8596F700E4035C /* Utilities */,
 				5C398D4E2C85944200E4035C /* Store */,
 				5C398D282C85931500E4035C /* Assets.xcassets */,
 				5C398D2A2C85931500E4035C /* Preview Content */,
@@ -147,6 +162,32 @@
 				5C398D522C85966800E4035C /* AppReducer.swift */,
 			);
 			path = Reducers;
+			sourceTree = "<group>";
+		};
+		5C398D542C8596F700E4035C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5C398D572C8597BC00E4035C /* Extensions */,
+				5C398D552C85971100E4035C /* ImageDownloader.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5C398D572C8597BC00E4035C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5C398D582C8597DC00E4035C /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5C398D5A2C85985200E4035C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5C398D5B2C85987B00E4035C /* URLImage.swift */,
+				5C398D5D2C85997000E4035C /* RatingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,10 +320,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C398D5C2C85987B00E4035C /* URLImage.swift in Sources */,
 				5C398D502C85945900E4035C /* Store.swift in Sources */,
+				5C398D562C85971100E4035C /* ImageDownloader.swift in Sources */,
+				5C398D5E2C85997000E4035C /* RatingView.swift in Sources */,
 				5C398D272C85931400E4035C /* ContentView.swift in Sources */,
 				5C398D532C85966800E4035C /* AppReducer.swift in Sources */,
+				5C398D592C8597DC00E4035C /* String+Extensions.swift in Sources */,
 				5C398D252C85931400E4035C /* MoviesApp.swift in Sources */,
+				5C398D612C859C7400E4035C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +367,7 @@
 /* Begin XCBuildConfiguration section */
 		5C398D432C85931500E4035C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C398D5F2C859B6000E4035C /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -376,6 +423,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -384,6 +432,7 @@
 		};
 		5C398D442C85931500E4035C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C398D5F2C859B6000E4035C /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -432,6 +481,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
