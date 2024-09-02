@@ -21,6 +21,7 @@
 		5C398D5C2C85987B00E4035C /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D5B2C85987B00E4035C /* URLImage.swift */; };
 		5C398D5E2C85997000E4035C /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D5D2C85997000E4035C /* RatingView.swift */; };
 		5C398D612C859C7400E4035C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D602C859C7400E4035C /* Constants.swift */; };
+		5C398D632C859DA300E4035C /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5C398D622C859DA300E4035C /* Secrets.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +58,8 @@
 		5C398D582C8597DC00E4035C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		5C398D5B2C85987B00E4035C /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		5C398D5D2C85997000E4035C /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
-		5C398D5F2C859B6000E4035C /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		5C398D602C859C7400E4035C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5C398D622C859DA300E4035C /* Secrets.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +90,7 @@
 		5C398D182C85931400E4035C = {
 			isa = PBXGroup;
 			children = (
-				5C398D5F2C859B6000E4035C /* Secrets.xcconfig */,
+				5C398D622C859DA300E4035C /* Secrets.xcconfig */,
 				5C398D232C85931400E4035C /* Movies */,
 				5C398D342C85931500E4035C /* MoviesTests */,
 				5C398D3E2C85931500E4035C /* MoviesUITests */,
@@ -296,6 +297,7 @@
 			files = (
 				5C398D2C2C85931500E4035C /* Preview Assets.xcassets in Resources */,
 				5C398D292C85931500E4035C /* Assets.xcassets in Resources */,
+				5C398D632C859DA300E4035C /* Secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +369,6 @@
 /* Begin XCBuildConfiguration section */
 		5C398D432C85931500E4035C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C398D5F2C859B6000E4035C /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -432,7 +433,6 @@
 		};
 		5C398D442C85931500E4035C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C398D5F2C859B6000E4035C /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
