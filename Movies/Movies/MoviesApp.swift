@@ -9,10 +9,11 @@ import SwiftUI
 
 @main
 struct MoviesApp: App {
-    @StateObject private var appStore = AppStore(store: .init(state: .defaultValue, 
+    @StateObject private var appStore = AppStore(store: .init(state: .defaultValue,
                                                               reducer: AppState.reducer.reduce,
-                                                              middleware: .init()))
-
+                                                              middleware: .init(AppState.middleware.middleware))
+    )
+    
     
     var body: some Scene {
         WindowGroup {

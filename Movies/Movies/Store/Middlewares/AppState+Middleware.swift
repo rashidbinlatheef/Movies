@@ -10,3 +10,9 @@ import Foundation
 extension AppState {
     enum Middleware {}
 }
+
+extension AppState {
+    static let middleware = CompositeMiddleware<AppState, AppAction>(
+        AppState.Middleware.counterMiddleware.middleware
+    )
+}

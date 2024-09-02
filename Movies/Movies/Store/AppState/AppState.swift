@@ -9,15 +9,16 @@ import Foundation
 
 struct AppState {
     var movies: [Movie]
+    var counter: Counter
 }
 
 extension AppState: Defaultable {
-    static let defaultValue = AppState(movies: [])
+    static let defaultValue = AppState(movies: [], counter: .defaultValue)
 }
 
 extension AppState {
     static let reducer = CompositeReducer<AppState, AppAction>(
-       
+        PartialReducer<AppState, AppAction>(of: \.counter, Counter.reducer.reduce).reduce
     )
 }
 

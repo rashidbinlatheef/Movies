@@ -14,7 +14,6 @@
 		5C398D362C85931500E4035C /* MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D352C85931500E4035C /* MoviesTests.swift */; };
 		5C398D402C85931500E4035C /* MoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D3F2C85931500E4035C /* MoviesUITests.swift */; };
 		5C398D422C85931500E4035C /* MoviesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D412C85931500E4035C /* MoviesUITestsLaunchTests.swift */; };
-		5C398D532C85966800E4035C /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D522C85966800E4035C /* AppReducer.swift */; };
 		5C398D562C85971100E4035C /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D552C85971100E4035C /* ImageDownloader.swift */; };
 		5C398D592C8597DC00E4035C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D582C8597DC00E4035C /* String+Extensions.swift */; };
 		5C398D5C2C85987B00E4035C /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D5B2C85987B00E4035C /* URLImage.swift */; };
@@ -32,6 +31,9 @@
 		5C398D7E2C85FBD300E4035C /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D7D2C85FBD300E4035C /* AppAction.swift */; };
 		5C398D812C85FC4500E4035C /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D802C85FC4500E4035C /* AppStore.swift */; };
 		5C398D842C85FC7200E4035C /* AppState+Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D832C85FC7200E4035C /* AppState+Middleware.swift */; };
+		5C398D862C86233000E4035C /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D852C86233000E4035C /* CounterState.swift */; };
+		5C398D882C8623AF00E4035C /* CounterActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D872C8623AF00E4035C /* CounterActions.swift */; };
+		5C398D8C2C86247B00E4035C /* CounterMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D8B2C86247B00E4035C /* CounterMiddleware.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +64,6 @@
 		5C398D3B2C85931500E4035C /* MoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C398D3F2C85931500E4035C /* MoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUITests.swift; sourceTree = "<group>"; };
 		5C398D412C85931500E4035C /* MoviesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5C398D522C85966800E4035C /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		5C398D552C85971100E4035C /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		5C398D582C8597DC00E4035C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		5C398D5B2C85987B00E4035C /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
@@ -81,6 +82,9 @@
 		5C398D7D2C85FBD300E4035C /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
 		5C398D802C85FC4500E4035C /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		5C398D832C85FC7200E4035C /* AppState+Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState+Middleware.swift"; sourceTree = "<group>"; };
+		5C398D852C86233000E4035C /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
+		5C398D872C8623AF00E4035C /* CounterActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterActions.swift; sourceTree = "<group>"; };
+		5C398D8B2C86247B00E4035C /* CounterMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterMiddleware.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,18 +181,9 @@
 				5C398D7A2C85FB6600E4035C /* Models */,
 				5C398D7F2C85FBDC00E4035C /* Actions */,
 				5C398D682C85FA9900E4035C /* AppState */,
-				5C398D512C8594C600E4035C /* Reducers */,
 				5C398D722C85FB1400E4035C /* Redux */,
 			);
 			path = Store;
-			sourceTree = "<group>";
-		};
-		5C398D512C8594C600E4035C /* Reducers */ = {
-			isa = PBXGroup;
-			children = (
-				5C398D522C85966800E4035C /* AppReducer.swift */,
-			);
-			path = Reducers;
 			sourceTree = "<group>";
 		};
 		5C398D542C8596F700E4035C /* Utilities */ = {
@@ -221,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				5C398D692C85FAA300E4035C /* AppState.swift */,
+				5C398D852C86233000E4035C /* CounterState.swift */,
 			);
 			path = AppState;
 			sourceTree = "<group>";
@@ -251,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				5C398D7D2C85FBD300E4035C /* AppAction.swift */,
+				5C398D872C8623AF00E4035C /* CounterActions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -259,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				5C398D832C85FC7200E4035C /* AppState+Middleware.swift */,
+				5C398D8B2C86247B00E4035C /* CounterMiddleware.swift */,
 			);
 			path = Middlewares;
 			sourceTree = "<group>";
@@ -403,11 +401,13 @@
 				5C398D782C85FB1500E4035C /* ReduxMiddleware.swift in Sources */,
 				5C398D562C85971100E4035C /* ImageDownloader.swift in Sources */,
 				5C398D5E2C85997000E4035C /* RatingView.swift in Sources */,
+				5C398D8C2C86247B00E4035C /* CounterMiddleware.swift in Sources */,
 				5C398D812C85FC4500E4035C /* AppStore.swift in Sources */,
 				5C398D272C85931400E4035C /* ContentView.swift in Sources */,
+				5C398D862C86233000E4035C /* CounterState.swift in Sources */,
 				5C398D792C85FB1500E4035C /* Store.swift in Sources */,
-				5C398D532C85966800E4035C /* AppReducer.swift in Sources */,
 				5C398D732C85FB1500E4035C /* Dispatcher.swift in Sources */,
+				5C398D882C8623AF00E4035C /* CounterActions.swift in Sources */,
 				5C398D592C8597DC00E4035C /* String+Extensions.swift in Sources */,
 				5C398D842C85FC7200E4035C /* AppState+Middleware.swift in Sources */,
 				5C398D252C85931400E4035C /* MoviesApp.swift in Sources */,
