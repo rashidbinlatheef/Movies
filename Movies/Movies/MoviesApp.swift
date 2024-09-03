@@ -18,6 +18,7 @@ struct MoviesApp: App {
         WindowGroup {
             ContentView(interactor: .init(store: appStore), props: .defaultValue)
                 .environmentObject(appStore)
+                .environmentObject(Router())
         }
     }
 }

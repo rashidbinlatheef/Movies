@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View, Props {
     @StateObject var interactor: CounterInteractor
+    @EnvironmentObject var router: Router
     
     @State var props: Props
     
@@ -20,20 +21,30 @@ struct ContentView: View, Props {
     }
     
     var body: some View {
-        VStack {
-            Text("\(props.counter)")
-            Button {
-                props.update?(4)
-            } label: {
-                Text("Increment Counter")
+        NavigationStack(path: $router.path) {
+            VStack(spacing: 20) {
+                Button {
+                    router.navigateTo(.detail)
+                } label: {
+                    Text("Push Detail")
+                }
+                
+                Button {
+                    // TODO: present detail view
+                } label: {
+                    Text("Present Detail")
+                }
             }
-        }
-        .padding()
-        .onAppear{
-            props = interactor.props
-        }
-        .onReceive(interactor.$props) { newProps in
-            props = newProps
+            .padding()
+            .onAppear{
+                props = interactor.props
+            }
+            .onReceive(interactor.$props) { newProps in
+                props = newProps
+            }
+            .navigationDestination(for: Router.Route.self) { route in
+                router.view(for: route)
+            }
         }
     }
 }
@@ -41,6 +52,6 @@ struct ContentView: View, Props {
 #Preview {
     ContentView(interactor: .init(store: .init(store: .init(state: .defaultValue,
                                                             reducer: AppState.reducer,
-                                                            middleware: .init(AppState.middleware)))), 
+                                                            middleware: .init(AppState.middleware)))),
                 props: .defaultValue)
 }

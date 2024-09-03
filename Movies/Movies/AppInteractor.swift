@@ -34,3 +34,33 @@ class AppInteractor<ViewType: Props>: ObservableObject {
         .defaultValue
     }
 }
+
+final class Router: ObservableObject {
+    enum Route: Hashable {
+        case detail
+    }
+    
+    @Published var path = NavigationPath()
+    
+    func view(for path: Route) -> some View {
+        switch path {
+        case .detail:
+            return DetailView()
+        }
+    }
+    
+    // Used by views to navigate to another view
+    func navigateTo(_ route: Route) {
+        path.append(route)
+    }
+    
+    // Used to go back to the previous screen
+    func navigateBack() {
+        path.removeLast()
+    }
+    
+    // Pop to the root screen in our hierarchy
+    func popToRoot() {
+        path.removeLast(path.count)
+    }
+}
