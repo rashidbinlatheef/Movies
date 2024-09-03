@@ -11,7 +11,7 @@ import Foundation
 extension AppState.Middleware {
     static let counterMiddleware = CompositeMiddleware<AppState, AppAction>(
         PartialMiddleware(of: \.counter, updateCounter.middleware).middleware
-    )
+    ).middleware
 }
 
 private extension AppState.Middleware {

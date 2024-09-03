@@ -10,14 +10,13 @@ import SwiftUI
 @main
 struct MoviesApp: App {
     @StateObject private var appStore = AppStore(store: .init(state: .defaultValue,
-                                                              reducer: AppState.reducer.reduce,
-                                                              middleware: .init(AppState.middleware.middleware))
+                                                              reducer: AppState.reducer,
+                                                              middleware: .init(AppState.middleware))
     )
-    
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(interactor: .init(store: appStore), props: .defaultValue)
                 .environmentObject(appStore)
         }
     }

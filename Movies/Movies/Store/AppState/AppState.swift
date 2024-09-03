@@ -19,7 +19,7 @@ extension AppState: Defaultable {
 extension AppState {
     static let reducer = CompositeReducer<AppState, AppAction>(
         PartialReducer<AppState, AppAction>(of: \.counter, Counter.reducer.reduce).reduce
-    )
+    ).reduce
 }
 
 protocol Defaultable {

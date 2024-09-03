@@ -13,6 +13,6 @@ extension AppState {
 
 extension AppState {
     static let middleware = CompositeMiddleware<AppState, AppAction>(
-        AppState.Middleware.counterMiddleware.middleware
-    )
+        AppState.Middleware.counterMiddleware
+    ).middleware
 }

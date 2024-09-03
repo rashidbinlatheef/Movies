@@ -34,6 +34,8 @@
 		5C398D862C86233000E4035C /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D852C86233000E4035C /* CounterState.swift */; };
 		5C398D882C8623AF00E4035C /* CounterActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D872C8623AF00E4035C /* CounterActions.swift */; };
 		5C398D8C2C86247B00E4035C /* CounterMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D8B2C86247B00E4035C /* CounterMiddleware.swift */; };
+		5C398D8E2C862E6800E4035C /* AppInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D8D2C862E6800E4035C /* AppInteractor.swift */; };
+		5C398D902C8633E500E4035C /* CounterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C398D8F2C8633E500E4035C /* CounterInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		5C398D852C86233000E4035C /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
 		5C398D872C8623AF00E4035C /* CounterActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterActions.swift; sourceTree = "<group>"; };
 		5C398D8B2C86247B00E4035C /* CounterMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterMiddleware.swift; sourceTree = "<group>"; };
+		5C398D8D2C862E6800E4035C /* AppInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInteractor.swift; sourceTree = "<group>"; };
+		5C398D8F2C8633E500E4035C /* CounterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,8 @@
 				5C398D242C85931400E4035C /* MoviesApp.swift */,
 				5C398D602C859C7400E4035C /* Constants.swift */,
 				5C398D262C85931400E4035C /* ContentView.swift */,
+				5C398D8D2C862E6800E4035C /* AppInteractor.swift */,
+				5C398D8F2C8633E500E4035C /* CounterInteractor.swift */,
 				5C398D5A2C85985200E4035C /* Views */,
 				5C398D542C8596F700E4035C /* Utilities */,
 				5C398D4E2C85944200E4035C /* Store */,
@@ -404,12 +410,14 @@
 				5C398D8C2C86247B00E4035C /* CounterMiddleware.swift in Sources */,
 				5C398D812C85FC4500E4035C /* AppStore.swift in Sources */,
 				5C398D272C85931400E4035C /* ContentView.swift in Sources */,
+				5C398D902C8633E500E4035C /* CounterInteractor.swift in Sources */,
 				5C398D862C86233000E4035C /* CounterState.swift in Sources */,
 				5C398D792C85FB1500E4035C /* Store.swift in Sources */,
 				5C398D732C85FB1500E4035C /* Dispatcher.swift in Sources */,
 				5C398D882C8623AF00E4035C /* CounterActions.swift in Sources */,
 				5C398D592C8597DC00E4035C /* String+Extensions.swift in Sources */,
 				5C398D842C85FC7200E4035C /* AppState+Middleware.swift in Sources */,
+				5C398D8E2C862E6800E4035C /* AppInteractor.swift in Sources */,
 				5C398D252C85931400E4035C /* MoviesApp.swift in Sources */,
 				5C398D612C859C7400E4035C /* Constants.swift in Sources */,
 				5C398D742C85FB1500E4035C /* Modifyable.swift in Sources */,
